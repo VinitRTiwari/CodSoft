@@ -5,6 +5,9 @@ while True:
     for i in range(5):
         options = ["Rock", "Paper", "Scissors"]
         user = input("Choose Rock, Paper, or Scissors: ")
+        if user.lower() != "rock" or user.lower() != "paper" or user.lower() != "scissors":
+            print("Invalid input....")
+            exit()
         computer = random.choice(options)
         if user.lower() == computer.lower():
             print("It's a tie! Both players chose ", user , ".")
